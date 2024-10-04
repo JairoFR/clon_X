@@ -1,0 +1,25 @@
+.tweet {
+    padding: 10px; /* Espacio interno para el tweet */
+    margin-bottom: 10px; /* Espacio entre tweets */
+  }
+  
+  #tweets hr {
+    border: none; /* Eliminar el estilo del borde */
+    border-top: 1px solid #ccc; /* Línea horizontal */
+    margin: 0; /* Eliminar márgenes */
+  }
+
+  /* Borde vertical a la derecha de cada columna, excepto la última */
+main .col-4:not(:last-child) {
+    border-right: 1px solid #ccc; /* Color y grosor del borde */
+  }
+
+.logo {
+    width: 140px; /* Ajusta el ancho según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+
+  .tweet-link {
+    text-decoration: none; /* Evita subrayado del texto */
+    color: inherit; /* Mantiene el color del texto original */
+  }

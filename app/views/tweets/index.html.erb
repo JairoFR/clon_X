@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+<%= link_to "New tweet", new_tweet_path %>
+<div id="tweets">
+  <% @tweets.each do |tweet| %>
+    <%= link_to tweet_path(tweet), class: "tweet-link" do %>
+      <div class="tweet ms-5">
+        <%= render tweet %>
+      </div>
+      <hr> <!-- Línea horizontal entre tweets -->
+    <% end %>
+  <% end %>
+</div>
