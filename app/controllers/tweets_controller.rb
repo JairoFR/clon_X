@@ -1,10 +1,14 @@
 class TweetsController < ApplicationController
+  include Pagy::Backend
   before_action :set_tweet, only: %i[ show edit update destroy ]
+
 
   # GET /tweets or /tweets.json
   def index
     # Ordenar por la fecha de creación en orden descendente
-    @tweets = Tweet.order(created_at: :desc)
+    # @pagy, @tweets = pagy(Tweet.all, items: 10) # Paginar con 10 tweets por página
+    # @tweets = Tweet.order(created_at: :desc)
+    @pagy, @tweets = pagy(Tweet.order(created_at: :desc), items: 10)
   end
 
   # GET /tweets/1 or /tweets/1.json

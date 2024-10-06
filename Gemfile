@@ -58,3 +58,5 @@ end
 
 # Gemfile
 gem "faker"
+
+gem "pagy"

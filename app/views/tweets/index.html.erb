@@ -6,7 +6,8 @@
       <div class="tweet ms-5">
         <%= render tweet %>
       </div>
-      <hr> <!-- Línea horizontal entre tweets -->
     <% end %>
+    <hr> <!-- Línea horizontal entre tweets -->
   <% end %>
+  <%=raw pagy_nav(@pagy)%>
 </div>
